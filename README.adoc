@@ -1,0 +1,17 @@
+= Beanx
+zero88
+:repo: zero88/bean.x
+:artifact: io.github.zero88/beanx
+:sonarKey: zero88_beanx
+
+image:https://github.com/{repo}/actions/workflows/ci.yml/badge.svg[{repo},link=https://github.com/{repo}/actions/workflows/ci.yml]
+image:https://img.shields.io/github/v/release/{repo}?sort=semver[GitHub release (latest SemVer)]
+image:https://img.shields.io/nexus/r/{artifact}?server=https%3A%2F%2Foss.sonatype.org[Sonatype Nexus (Releases)]
+image:https://img.shields.io/nexus/s/{artifact}?server=https%3A%2F%2Foss.sonatype.org[Sonatype Nexus (Snapshots)]
+
+image:https://sonarcloud.io/api/project_badges/measure?project={sonarKey}&metric=ncloc[Lines of Code,link=https://sonarcloud.io/dashboard?id={sonarKey}]
+image:https://sonarcloud.io/api/project_badges/measure?project={sonarKey}&metric=coverage[Coverage,link=https://sonarcloud.io/dashboard?id={sonarKey}]
+image:https://sonarcloud.io/api/project_badges/measure?project={sonarKey}&metric=sqale_rating[Maintainability Rating,link=https://sonarcloud.io/dashboard?id={sonarKey}]
+image:https://sonarcloud.io/api/project_badges/measure?project={sonarKey}&metric=reliability_rating[Reliability Rating,link=https://sonarcloud.io/dashboard?id={sonarKey}]
+image:https://sonarcloud.io/api/project_badges/measure?project={sonarKey}&metric=security_rating[Security Rating,link=https://sonarcloud.io/dashboard?id={sonarKey}]
+image:https://sonarcloud.io/api/project_badges/measure?project={sonarKey}&metric=alert_status[Quality Gate Status,link=https://sonarcloud.io/dashboard?id={sonarKey}]
