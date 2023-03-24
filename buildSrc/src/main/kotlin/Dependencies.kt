@@ -50,6 +50,7 @@ object VertxLibs {
     @JvmField val core = "io.vertx:vertx-core:${Version.vertxCore}"
     @JvmField val codegen = "io.vertx:vertx-codegen:${Version.vertxCore}"
     @JvmField val junit5 = "io.vertx:vertx-junit5:${Version.vertxJunit}"
+    @JvmField val jsonschema = "io.vertx:vertx-json-schema:${Version.vertxCore}"
     const val docgen = "io.vertx:vertx-docgen:${Version.docgen}"
 }
 
@@ -58,10 +59,8 @@ object ZeroLibs {
 
         const val gradlePlugin = "2.1.0"
         const val utils = "2.0.0"
-        const val rsql = "2.2.1"
     }
 
-    const val rsql = "io.github.zero88:rsql-parser:${Version.rsql}"
     const val utils = "io.github.zero88:java-utils:${Version.utils}"
 
     object Plugins {
@@ -70,3 +69,14 @@ object ZeroLibs {
         const val root = "io.github.zero88.gradle.root"
     }
 }
+
+object ValidationLibs {
+    object Version {
+        const val api = "3.0.2"
+        const val hibernate = "8.0.0.Final"
+    }
+
+    const val api = "jakarta.validation:jakarta.validation-api:${Version.api}"
+    const val hibernate = "org.hibernate.validator:hibernate-validator:${Version.hibernate}"
+}
+
