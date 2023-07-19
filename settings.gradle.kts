@@ -18,26 +18,23 @@ val projectName = "beanx"
 val profile: String by settings
 var pp: Array<String> = arrayOf()
 val pools = mutableMapOf(
-    projectName to arrayOf(":api"),
+    projectName to arrayOf(":core"),
     "sample" to emptyArray(),
     "integtest" to emptyArray()
 )
-val docs = arrayOf(":docs:asciidoc")
+val docs = arrayOf(":docs")
 val excludeCISonar = docs
 val excludeCIBuild = pools["sample"]!! + pools["integtest"]!! + excludeCISonar
-pools.putAll(
-    mapOf(
-        "docs" to pools[projectName]!!.plus(docs)
-    )
-)
+pools.putAll(mapOf("docs" to pools[projectName]!!.plus(docs)))
 
 fun flatten(): List<String> = pools.values.toTypedArray().flatten()
 
 pp = when {
-    profile == "all" || profile.isBlank() -> flatten().toTypedArray()
-    profile == "ciBuild"                  -> flatten().filter { !excludeCIBuild.contains(it) }.toTypedArray()
-    profile == "ciSonar"                  -> flatten().filter { !excludeCISonar.contains(it) }.toTypedArray()
-    else                                  -> pools.getOrElse(profile) { throw IllegalArgumentException("Not found profile[$profile]") }
+    profile.isBlank()      -> flatten().toTypedArray()
+    profile == "all"       -> flatten().toTypedArray()
+    profile == "ciBuild"   -> flatten().filter { !excludeCIBuild.contains(it) }.toTypedArray()
+    profile == "ciSonar"   -> flatten().filter { !excludeCISonar.contains(it) }.toTypedArray()
+    else                   -> pools.getOrElse(profile) { throw IllegalArgumentException("Not found profile[$profile]") }
 }
 
 pp.forEach { include(it) }
