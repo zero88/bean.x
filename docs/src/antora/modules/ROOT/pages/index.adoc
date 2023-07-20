@@ -1,2 +1,0 @@
-= Bean.x
-zero88
