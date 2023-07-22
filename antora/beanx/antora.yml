@@ -1,6 +1,6 @@
 name: template
 title: Doc template
-version: main
+version: ''
 nav: [modules/ROOT/nav.adoc]
 asciidoc:
-  attributes: {rsql-version: 0.0.1-SNAPSHOT}
+  attributes: {rsql-version: -SNAPSHOT}
