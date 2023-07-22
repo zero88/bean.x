@@ -1,5 +1,5 @@
-name: template
-title: Doc template
+name: beanx
+title: Bean,x
 version: main
 nav: [modules/ROOT/nav.adoc]
 asciidoc:
