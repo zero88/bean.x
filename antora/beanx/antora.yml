@@ -3,4 +3,4 @@ title: Doc template
 version: main
 nav: [modules/ROOT/nav.adoc]
 asciidoc:
-  attributes: {rsql-version: 0.0.1-SNAPSHOT}
+  attributes: {project-group: io.github.zero88, project-name: beanx, project-version: 0.0.1-SNAPSHOT}
